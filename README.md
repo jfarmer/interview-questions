@@ -13,6 +13,10 @@ Successfully passing phone screens and whiteboard interviews requires four thing
 1. [Interview Questions](#interview-questions)
 1. Common techniques (coming soon)
 
+## Submitting Work
+
+Fork this repo and add implementations of your own data structures and answers to the interview questions.  More will be added over the next two weeks, so you will have to pull down upstream changes.
+
 ## Common Data Structures
 
 Be able to quickly implement these data structures and their common operations in your language(s) of choice. There are other data structures worth knowing, but these are by far the most common.
