@@ -15,7 +15,7 @@ Successfully passing phone screens and whiteboard interviews requires four thing
 
 ## Common Data Structures
 
-Be able to quickly implement these data structures and their common operations in your language(s) of choice.
+Be able to quickly implement these data structures and their common operations in your language(s) of choice. There are other data structures worth knowing, but these are by far the most common.
 
 ### Singly Linked Lists
 
