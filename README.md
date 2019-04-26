@@ -23,6 +23,8 @@ Be able to quickly implement these data structures and their common operations i
 
 ### Singly Linked Lists
 
+See the [linked-lists](linked-lists) directory if you want to practice.
+
 Operations: append, prepend, insert, delete, find, traverse
 
 ### Doubly Linked Lists
