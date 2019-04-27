@@ -50,6 +50,10 @@ class ListNode {
     this.first = first;
     this.rest = rest;
   }
+
+  isEmpty() {
+    return false;
+  }
 }
 
 class EmptyListNode extends ListNode {
@@ -61,6 +65,10 @@ class EmptyListNode extends ListNode {
     //
     // and guarantee that rest will always be a ListNode.
     this.rest = this;
+  }
+
+  isEmpty() {
+    return true;
   }
 }
 

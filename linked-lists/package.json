@@ -1,0 +1,17 @@
+{
+  "name": "linked-lists",
+  "version": "1.0.0",
+  "description": "Linked lists are surprisingly simple and natural once you've used them a bit.",
+  "main": "List.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Farmer <jesse@20bits.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "^2.1.4"
+  },
+  "dependencies": {
+    "microtime": "^3.0.0"
+  }
+}
