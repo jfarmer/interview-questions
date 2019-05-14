@@ -18,11 +18,23 @@ function isEmpty(list) {
  *
  */
 function foldRight(fn, acc, list) {
+  const { first, rest } = list
 
+  if (isEmpty(rest)) {
+    return fn(first, acc)
+  }
+
+  return fn(first, foldRight(fn, acc, rest))
 }
 
 function foldLeft(fn, acc, list) {
+  const { first, rest } = list
 
+  if (isEmpty(rest)) {
+    return fn(acc, first)
+  }
+
+  return foldLeft(fn, fn(acc, first), rest)
 }
 
 /*
@@ -36,19 +48,12 @@ function append(value, list) {
   // return foldRight(List, List(value), list);
 }
 
-// prepend(value, list) {
-//   // Notice how prepend and the constructor are the same function!
-//   // We comment this out because there's no reason to call
-//   // prepend(first, rest) — just call List(first, rest)!
-//   return List(value, list);
-// }
-
 function map(fn, list) {
-
+  return foldRight((x, y) => List(fn(x), y), new EmptyListNode(), list)
 }
 
 function filter(fn, list) {
-
+  return foldRight((x, y) => fn(x) ? List(x, y) : y, new EmptyListNode(), list)
 }
 
 function maxBy(fn, list) {
@@ -60,19 +65,19 @@ function minBy(fn, list) {
 }
 
 function any(fn, list) {
-
+  return foldRight((x, y) => fn(x) || y, false, list)
 }
 
 function all(fn, list) {
-
+  return foldRight((x, y) => fn(x) && y, true, list)
 }
 
 function reverse(list) {
-
+  //return foldRight((x, y) => x != null ? append(x, y) : y, new EmptyListNode(), list) 
 }
 
 function sum(list) {
-
+  return foldRight((x, y) =>  x + y, 0, list)
 }
 
 module.exports = {
